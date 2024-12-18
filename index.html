@@ -24,7 +24,7 @@
                 </div>
                 <div class="profile-details">
                     <h1><strong>Shravani Gunavanth</strong></h1>
-                    <h2>Software Engineer | Virginia</h2>
+                    <h2>Full Stack Developer</h2>
                     <p><strong>shravani.gunavanth@outlook.com</strong></p>
                     <p><strong>+1(408)-887-2441</strong> </p>
                     <p><a href= "https://www.linkedin.com/in/shravanigunavanth/" target="_blank"> My Linkedin Profile </a></p>
@@ -471,6 +471,59 @@
   </div>
 </section>
 
+<section id="workshops" class="section">
+    <div class="container">
+      <h2>Workshops Attended</h2>
+      <div class="timeline">
+        <!-- Workshop 1 -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-cloud"></i> <!-- Cloud Icon -->
+          </div>
+          <div class="timeline-content">
+            <h3>Cloud Computing</h3>
+            <p><strong>Organized by:</strong> ELAN IIT HYDERABAD & ENTRENCH ELECTRONICS</p>
+            <p>Attended a workshop on Cloud Computing and Amazon Web Services (AWS), covering cloud architecture, storage, and computing models.</p>
+          </div>
+        </div>
+        <!-- Workshop 2 -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-network-wired"></i> <!-- Networking Icon -->
+          </div>
+          <div class="timeline-content">
+            <h3>Computer Networking</h3>
+            <p><strong>Organized by:</strong> Advanced Numerical Research and Analysis Group (D.R.D.O)</p>
+            <p>Participated in a training program on Computer Networking Infrastructure and Protocol Analysis, exploring network protocols and security.</p>
+          </div>
+        </div>
+        <!-- Workshop 3 -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-cogs"></i> <!-- Gear Icon -->
+          </div>
+          <div class="timeline-content">
+            <h3>Accenture Learning Symposium</h3>
+            <p><strong>Organized by:</strong> ACCENTURE</p>
+            <p>Attended a one-day workshop focused on Deep Learning and DevOps practices, exploring AI models and DevOps toolchains.</p>
+          </div>
+        </div>
+        <!-- Workshop 4 -->
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-graduation-cap"></i> <!-- Graduation Cap Icon -->
+          </div>
+          <div class="timeline-content">
+            <h3>CDAC Training</h3>
+            <p><strong>Organized by:</strong> Centre for Development of Advanced Computing (CDAC) Hyderabad</p>
+            <p>Completed a training program on the Diploma in Modern Software Development Essentials (DMSDE) course, learning advanced software development techniques.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 
     <!-- Footer -->
     <footer>
@@ -495,6 +548,20 @@
           const cardBody = document.getElementById(`project-${projectId}`);
           cardBody.classList.toggle('active'); // Toggles the active class
       }
+
+      function toggleWorkshop(workshopId) {
+            const workshopBody = document.getElementById(`workshop-${workshopId}`);
+            const isVisible = workshopBody.style.display === 'block';
+
+            // Hide all other workshops
+            document.querySelectorAll('.card-body').forEach(body => {
+            body.style.display = 'none';
+            });
+
+            // Toggle the clicked workshop's visibility
+            workshopBody.style.display = isVisible ? 'none' : 'block';
+        }
+
     </script>
 </body>
 
